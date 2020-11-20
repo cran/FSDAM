@@ -1,0 +1,7 @@
+importFrom(kyotil, '%.%', rbern, expit, keepWarnings, myprint, concatList, mysapply, "tXDX", "interpolate", "last", getFixedEf, abline.pt.slope, contain, mymatplot)
+importFrom(reticulate, import_from_path, py_module_available)
+importFrom("graphics", "points")
+
+export(fsdam, plot.fsdam)
+
+S3method(plot,fsdam)
