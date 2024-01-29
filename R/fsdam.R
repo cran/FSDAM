@@ -8,6 +8,8 @@ fsdam <- function(dat, opt_numCode=ncol(dat), opt_seed=1, opt_model="n", opt_gpu
     python_path <- system.file("python", package = "FSDAM")
     ae <- import_from_path("autoencoders", path = python_path)  
     
+    if (!is.data.frame(dat)) dat=data.frame(dat)    
+    
     out=ae$fsdam$main(dat, as.integer(opt_numCode), as.integer(opt_seed), opt_model, as.integer(opt_gpu), as.integer(opt_k), as.integer(opt_nEpochs), opt_constr, opt_tuneParam, opt_penfun, opt_ortho, opt_earlystop, verbose)    
     for (i in 1:length(out)) names(out[[i]])=c("reconstruct_loss", "pen_loss", "y_pred", "code", "decoder_w", "decoder_b", "history")
     
@@ -31,7 +33,8 @@ plot.fsdam=function (x, which=c("mse", "history", "decoder.func", "scatterplot")
     if (is.null(k)) k=1
     
     if (which=="mse") {
-        plot(c(1, x$mse), xlab="number of components", ylab="proportion of total variability", type="b", ...)
+        plot(0:length(x$mse), c(1, x$mse), xlab="Number of components", ylab="Proportion of variability unexplained", type="b", xaxt="n", ...)
+        axis(1, at=0:length(x$mse), labels=0:length(x$mse))
     } else if (which=="history") {
         mymatplot(x$history, legend.x=3, ...)
     } else if (which=="decoder.func") {

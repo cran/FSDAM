@@ -57,13 +57,13 @@ tuning parameter for orthogonality penalty
 whether to stop early 
 }
   \item{verbose}{
-%%     ~~Describe \code{verbose} here~~
+verbose
 }
   \item{x}{
 fsdam object
 }
   \item{which}{
-%%     ~~Describe \code{verbose} here~~
+which
 }
   \item{k}{
 the component to plot}
@@ -82,7 +82,9 @@ color of the predicted curve when which = scatterplot
 
 If the torch python package is not available, this function will stop. \cr
 \cr
-To make sure the right python installation is used, run reticulate::use_python("/app/easybuild/software/Python/3.7.4-foss-2016b/bin/python") in R before running this function for the first time.
+To make sure the right python installation is used, run reticulate::use_python("/app/easybuild/software/Python/3.7.4-foss-2016b/bin/python") in R before running this function for the first time.\cr
+\cr
+It is recommended that dat is scaled before calling fsdam.
 
 }
 \references{
