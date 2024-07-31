@@ -1,11 +1,12 @@
 f7fecf58aac2ec0ccaf3169b745a256e *ChangeLog
-239c6a656b55f1763cbbedeea63cb11d *DESCRIPTION
+eb6b2cb0af9411c35ce1afb8b324e2fd *DESCRIPTION
 ad2e1d47db40c205a08677a1ed63e96d *NAMESPACE
 d21f815cb1326a84b5cbe984008a7492 *R/fsdam.R
 6269d3f6bb2c4eebc4b23d73a6294784 *build/vignette.rds
 99861b8d80fcf0efbca3f5b10076d71d *data/cc.505.rda
 a01f741139e921aaa6658066925372f6 *data/hvtn505tier1.rda
 41251da558e5a8c7a9ccf4356d9f38e1 *inst/doc/FSDAM-vignette.pdf
+d24d24bf23f43396dc6b948018a1c9dc *inst/doc/FSDAM-vignette.pdf.asis
 d41d8cd98f00b204e9800998ecf8427e *inst/python/autoencoders/__init__.py
 30f0b09d3c1c02f1ddb829fcef0fea9b *inst/python/autoencoders/fsdam.py
 a616e808bd826e929f56223020649675 *inst/unitTests/Makefile
